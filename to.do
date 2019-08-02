@@ -15,3 +15,4 @@ Da usare per nav.vue (hover e idle)
 
 - Nav/NavLink con gestione active
 - NavLink larghezza fissa (quella del componente interno più largo)
+- Crea component div vuoto che accetta template-inline e bg(video,img,color,parallax)
