@@ -36,19 +36,7 @@
 
 <script>
 export default {
-  methods: {
-    /* TODO:
-        gestire l'align del testo (center, justify ecc)
-        hover sulle card
-        gestire il width della card come l'height dell'img (ternario+moltiplicatore)
-        auto cols (che riporta i dispari in auto sul 12)
-        Spaziatura varie (pa-n ma-n) parametrizzate
-        Gestire immagini come cover(ok), contain e box
-        Gestire list e layout più complessi
-        Gestire contenitore tutto immagine di fondo con div testo+azioni all'hover
-        Gestire action con spacer in mezzo
-    */
-  },
+  methods: {},
   created() {
     this.items = this.cars;
     //services random cars

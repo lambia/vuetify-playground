@@ -1,4 +1,18 @@
+CARDS
+    gestire l'align del testo (center, justify ecc)
+    hover sulle card
+    gestire il width della card come l'height dell'img (ternario+moltiplicatore)
+    auto cols (che riporta i dispari in auto sul 12)
+    Spaziatura varie (pa-n ma-n) parametrizzate
+    Gestire immagini come cover(ok), contain e box
+    Gestire list e layout più complessi
+    Gestire contenitore tutto immagine di fondo con div testo+azioni all'hover
+    Gestire action con spacer in mezzo
+    bottoni con event emitter
+
+GENERALE
 - per il momento i dataset sono all'interno dei component stessi, poi bisogna metterli in store il cui pointer viene passato dalle prop
+- store con namespace/components
 - Spostare l'handle resize da helloworld ad app, con store+emit, in modo che sia accessibile a tutti
 - v-app-bar si spacca il layout se usi shrink o expand
 - v-app-bar usare shrink ed expand per le versioni di menu, e bg on-scroll va via
