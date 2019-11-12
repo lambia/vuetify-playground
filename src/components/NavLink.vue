@@ -2,7 +2,7 @@
   <v-btn
     class="vertical"
     text
-    :color="color"
+    :color="appliedColor"
     :href="link"
     :to="path"
     target="_self"
@@ -27,11 +27,20 @@ export default {
     hover: Object
   },
   data: () => ({
-    hovered: false
+    hovered: false,
+    appliedColor: null
   }),
+  beforeMount() {
+    this.appliedColor = this.color || this.idle.color;
+  },
   methods: {
     onHover(status) {
       this.hovered = status;
+      if (status) {
+        this.appliedColor = this.hover.color || this.color || this.idle.color;
+      } else {
+        this.appliedColor = this.color || this.idle.color;
+      }
     },
     visible(caller) {
       return (
@@ -47,25 +56,9 @@ export default {
 .vertical > .v-btn__content {
   flex-direction: column !important;
 }
-.navLinkActive {
-  background: red;
-}
 .placeholderLabel {
   display: block;
   height: 1px;
   visibility: hidden;
-}
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
 }
 </style>

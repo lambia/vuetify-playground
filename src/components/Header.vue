@@ -15,7 +15,7 @@
       color="light-blue accent-2"
     ></v-progress-linear>
     <v-spacer></v-spacer>
-    <Nav :config="nav.defaults" :items="nav.items" />
+    <Nav :config="nav.config" :items="nav.items" />
   </v-app-bar>
 </template>
 
@@ -29,15 +29,16 @@ export default {
   data: () => ({
     loading: false,
     nav: {
-      defaults: {
-        color: "white",
+      config: {
         idle: {
           text: false,
-          icon: true
+          icon: true,
+          color: "#EEE"
         },
         hover: {
           text: true,
-          icon: false
+          icon: false,
+          color: "#FFF"
         }
       },
       items: [

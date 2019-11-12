@@ -7,7 +7,7 @@
       :link="item.link"
       :path="item.path"
       :icon="item.icon"
-      :color="item.color || config.color"
+      :color="item.color"
       :idle="config.idle"
       :hover="config.hover"
     />
