@@ -1,9 +1,6 @@
 <template>
-  <v-container class="pa-0" ref="pageTop">
-    <v-parallax
-      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-      :height="parallaxHeight"
-    >
+  <v-container fluid class="pa-0" ref="pageTop">
+    <v-parallax src="http://i.imgur.com/rkobCEp.jpg" :height="parallaxHeight">
       <v-layout align-center column justify-center>
         <h1 class="display-2 font-weight-thin mb-4">Vuetify.js</h1>
         <h4 class="subheading">Build your application today!</h4>
@@ -37,10 +34,7 @@
       </v-flex>
     </v-layout>
 
-    <v-parallax
-      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-      :height="parallaxHeight/2"
-    >
+    <v-parallax src="http://i.imgur.com/rkobCEp.jpg" :height="parallaxHeight/2">
       <v-layout align-center column justify-center>
         <h1 class="display-2 font-weight-thin mb-4">Vuetify.js</h1>
         <h4 class="subheading">Build your application today!</h4>
@@ -82,3 +76,6 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+</style>
