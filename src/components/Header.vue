@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app flat dark color="light-blue accent-3">
+  <v-app-bar app fixed flat elevation="0" dark color="light-blue accent-3">
     <v-toolbar-title class="headline text-uppercase">
       <span class="font-weight-bold">Titolo</span>
       <span>&nbsp;</span>
