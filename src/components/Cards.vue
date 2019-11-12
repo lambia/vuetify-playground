@@ -1,6 +1,6 @@
 <template>
   <v-row no-gutters class="pa-1">
-    <v-col v-for="(item, key) in items" :key="key" :cols="item.flex" class="pa-1">
+    <v-col v-for="(item, key) in items" :key="key" :cols="item.columns" class="pa-1">
       <v-card class="mx-auto" outlined :max-width="item.width || config.width">
         <v-img
           v-if="item.img && item.img.src"
@@ -71,7 +71,7 @@ export default {
           src:
             "https://www.ultimatecarpage.com/images/car/960/BMW-M3-GTR-Strassen-Version-59370.jpg"
         },
-        flex: 6,
+        columns: 6,
         title: "Drago Alato",
         text: "Una BMW E46 M3 GTR Strassen Version"
       },
@@ -80,7 +80,7 @@ export default {
           src:
             "https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/lotus-exige-430-rear.jpg"
         },
-        flex: 6,
+        columns: 6,
         title: "GoKart Rumoroso Plus",
         text: "La Lotus Exige Cup 430"
       },
@@ -90,14 +90,14 @@ export default {
             "https://foto1.newsauto.it/wp-content/uploads/2019/06/Fiat-Uno-Turbo-elaborate-8.jpg",
           height: 1.5
         },
-        flex: 12,
+        columns: 12,
         title: "Bara Volante",
         text: "Fiat Uno 45 Turbo"
       }
     ],
     random: [
       {
-        flex: 6,
+        columns: 6,
         title: "Contenitore 1",
         text: "lorem ipsum lorem ipsum",
         actions: [
@@ -107,7 +107,7 @@ export default {
         ]
       },
       {
-        flex: 6,
+        columns: 6,
         title: "Contenitore 2",
         text: "lorem ipsum lorem ipsum diverso",
         actions: [{ text: "OK" }]
@@ -116,7 +116,7 @@ export default {
     services: [
       {
         width: 300,
-        flex: 4,
+        columns: 4,
         title: "Facciamo Cose",
         text: "Fare cose è importante",
         icon: {
@@ -125,7 +125,7 @@ export default {
       },
       {
         width: 300,
-        flex: 4,
+        columns: 4,
         title: "Finte Porte",
         text: "Compra le uniche vere finte porte",
         icon: {
@@ -134,7 +134,7 @@ export default {
       },
       {
         width: 300,
-        flex: 4,
+        columns: 4,
         title: "Attenzione",
         text: "Questo ha l'icona custom",
         icon: {
