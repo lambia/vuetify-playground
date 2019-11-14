@@ -1,7 +1,7 @@
 <template>
   <v-row no-gutters class="pa-1">
     <v-col v-for="(item, key) in items" :key="key" :cols="item.columns" class="pa-1">
-      <v-card class="mx-auto" outlined :max-width="item.width || config.width">
+      <v-card class="mx-auto pa-2 pb-0" outlined :max-width="item.width || config.width">
         <v-img
           v-if="item.img && item.img.src"
           :src="item.img.src"
@@ -18,8 +18,15 @@
           class="pa-4"
         >{{item.icon.name}}</v-icon>
 
-        <v-card-title v-if="!item.img" v-text="item.title"></v-card-title>
-        <v-card-text v-text="item.text"></v-card-text>
+        <v-card-title v-if="!item.img" v-text="item.title" class="justify-center pa-2"></v-card-title>
+
+        <!-- <v-card-title :class="'justify-'+config.align.caption+' pa-2'" v-if="item.img.caption">
+          <v-spacer v-if="config.align.caption=='right'"></v-spacer>
+          {{item.img.caption}}
+          <v-spacer v-if="config.align.caption=='left'"></v-spacer>
+        </v-card-title>-->
+
+        <v-card-text v-text="item.text" class></v-card-text>
 
         <v-card-actions v-if="item.actions">
           <v-btn text v-for="action in item.actions" :key="action.name">
@@ -38,8 +45,7 @@
 export default {
   methods: {},
   created() {
-    this.items = this.cars;
-    //services random cars
+    this.items = [...this.services, ...this.random, ...this.cars];
   },
   data: () => ({
     config: {

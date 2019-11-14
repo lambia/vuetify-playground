@@ -1,5 +1,6 @@
 CARDS
-    gestire l'align del testo (center, justify ecc)
+    organizzare l'oggetto: img, caption, titolo, sovratitolo, sottotitolo, testo, bottoni con spacer, allineamento di ogni singola
+    organizzare l'oggetto: al component ne arriva uno che è [...config, ...item]
     hover sulle card
     gestire il width della card come l'height dell'img (ternario+moltiplicatore)
     auto cols (che riporta i dispari in auto sul 12)
