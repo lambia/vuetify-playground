@@ -4,20 +4,19 @@
       v-for="(item, key) in items"
       :key="key"
       :cols="item.card.columns"
-      class="pa-1"
-      :classes="{padding: 'pa-'+padding, margin: 'ma-'+margin}"
+      :class="[item.column.classes]"
     >
       <v-card
-        class="mx-auto pa-2 pb-0"
         :elevation="item.card.elevation"
         :outlined="item.card.outline"
         :max-width="item.card.width"
+        :class="[item.card.classes]"
       >
         <v-img
           v-if="item.cover && item.cover.src"
           :src="item.cover.src"
-          class="white--text align-end"
-          gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+          :class="[item.cover.classes]"
+          :gradient="item.cover.gradient"
           :height="item.cover.height"
         >
           <v-card-title v-text="item.cover.caption"></v-card-title>
@@ -26,10 +25,10 @@
           v-if="item.icon && item.icon.name"
           :size="item.icon.size"
           :color="item.icon.color"
-          class="pa-4"
+          :class="item.icon.classes"
         >{{item.icon.name}}</v-icon>
 
-        <v-card-title v-text="item.title.text" class="justify-center pa-2"></v-card-title>
+        <v-card-title v-text="item.title.text" :class="item.title.classes"></v-card-title>
 
         <!-- <v-card-title :class="'justify-'+config.align.caption+' pa-2'" v-if="item.img.caption">
           <v-spacer v-if="config.align.caption=='right'"></v-spacer>
@@ -37,7 +36,7 @@
           <v-spacer v-if="config.align.caption=='left'"></v-spacer>
         </v-card-title>-->
 
-        <v-card-text v-text="item.text.text" class></v-card-text>
+        <v-card-text v-text="item.text.text" :class="item.text.classes"></v-card-text>
 
         <!-- check per array di action nulle -->
 
@@ -83,25 +82,29 @@ export default {
       }
     },
     newItem: {
+      column: {
+        classes: ["pa-1", "ma-0"]
+      },
       card: {
         width: "100%",
         //width: 300,
         columns: 4,
         elevation: 0,
         outline: true,
-        padding: 1,
-        margin: 0
+        classes: ["mx-auto", "pa-0", "ma-0"]
         //aggiungere gli altri padding
       },
       cover: {
-        color: "red",
         src:
           "https://www.ultimatecarpage.com/images/car/960/BMW-M3-GTR-Strassen-Version-59370.jpg",
         caption: "Due titoli is megl che uan",
         height: 200,
         //height: 1.2 //con moltiplicatore item*config, ma forse meglio usare un layout fluido
-        action: "page/altra"
+        //action: "page/altra",
+        classes: ["white--text", "align-end", "pa-0", "ma-0"],
+        gradient: "to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
       },
+      /*
       image: {
         align: "left",
         src:
@@ -109,30 +112,39 @@ export default {
         caption: "Immaginina",
         href: "www.google.it"
       },
+      */
       icon: {
         name: "mdi-earth",
         size: 64,
-        color: "green"
-        //color: "#0CC"
+        color: "green",
+        //color: "#0CC",
+        classes: "pa-4"
       },
-      overline: { text: "overline", align: "center", color: "black", size: 16 },
-      title: { text: "TITOLONE", align: "center", color: "black", size: 16 },
+      /*
+      overline: { text: "overline", align: "center" },
+      */
+      title: {
+        text: "TITOLONE",
+        classes: ["justify-center", "pa-2", "black--text"]
+      },
+      /*
       subtitle: {
         text: "sottotitolo",
         align: "center",
         color: "black",
         size: 16
       },
+      */
       text: {
         text: "lorem ipsum lorem ipsum",
-        align: "left",
-        color: "black",
-        size: 16
+        classes: "text-center black--text"
       },
       actions: {
+        /*
         align: "left",
-        color: "black",
         size: 16,
+        color: "black",
+        */
         items: [
           { text: "solo testo" },
           { text: "con icona", icon: "mdi-heart" },
