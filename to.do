@@ -3,6 +3,7 @@ CARDS
     refactoring
         creare un costruttore di classi per pa/ma/fontsize/textcolor
         vedere se si può bindare una prop "padding o size" direttamente (es. oggetto di style senza vuetify)
+        align right
 
     lodash.merge
         lodash/fp/merge
