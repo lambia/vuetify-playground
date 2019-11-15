@@ -96,9 +96,14 @@ export default {
                     outlined: true
                 },
                 cover: {
-                    gradient: "to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)",
+                    gradient: "to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.5)",
                     class: ["white--text", "align-end", "pa-0", "ma-0"],
-                    height: 150
+                    height: 150,
+                    progress: {
+                        indeterminate: true,
+                        color: "grey lighten-5",
+                        size: 48
+                    }
                 },
                 icon: {
                     size: 64,
@@ -110,6 +115,13 @@ export default {
                 },
                 text: {
                     class: ["text-center", "black--text"]
+                },
+                _actions: {
+                    props: {
+                        class: ["black--text"],
+                        outlined: true,
+                        text: true
+                    }
                 }
             },
             items: [
@@ -141,7 +153,9 @@ export default {
                     cover: {
                         src:
                             "https://foto1.newsauto.it/wp-content/uploads/2019/06/Fiat-Uno-Turbo-elaborate-8.jpg",
-                        caption: "didascalia"
+                        caption: "didascalia",
+                        href:
+                            "https://foto1.newsauto.it/wp-content/uploads/2019/06/Fiat-Uno-Turbo-elaborate-8.jpg"
                     },
                     title: {
                         text: "Bara Volante"
@@ -161,7 +175,8 @@ export default {
                     title: { text: "Facciamo Cose" },
                     text: { text: "Fare cose è importante" },
                     icon: {
-                        name: "mdi-heart"
+                        name: "mdi-heart",
+                        href: "https://www.google.it"
                     }
                 },
                 {
@@ -194,9 +209,32 @@ export default {
                     },
                     actions: {
                         items: [
-                            { text: "solo testo" },
-                            { text: "con icona", icon: "mdi-heart" },
-                            { icon: "mdi-pencil" }
+                            {
+                                label: "solo testo",
+                                href: "https://www.google.it",
+                                target: "_blank",
+                                //CFG
+                                class: ["black--text"],
+                                outlined: true,
+                                text: true
+                            },
+                            {
+                                label: "con icona",
+                                iconName: "mdi-heart", //string -> oggetto (color, size ecc)
+                                to: "/about",
+                                //CFG
+                                class: ["black--text"],
+                                outlined: true,
+                                text: true
+                            },
+                            {
+                                iconName: "mdi-pencil", //string -> oggetto (color, size ecc)
+                                event: "button.clicked",
+                                //CFG
+                                class: ["black--text"],
+                                outlined: true,
+                                text: true
+                            }
                         ]
                     }
                 }

@@ -4,6 +4,15 @@
             <v-card v-bind="item.card">
                 <v-img v-if="item.cover && item.cover.src" v-bind="item.cover">
                     <v-card-title v-text="item.cover.caption"></v-card-title>
+                    <template v-slot:placeholder>
+                        <v-row class="fill-height ma-0" align="center" justify="center">
+                            <v-progress-circular
+                                v-if="item.cover.progress"
+                                v-bind="item.cover.progress"
+                            ></v-progress-circular>
+                            <!-- <v-icon size="64" v-if="item.cover.progress">mdi-image</v-icon> -->
+                        </v-row>
+                    </template>
                 </v-img>
 
                 <v-icon
@@ -22,10 +31,15 @@
                 <v-card-text v-text="item.text.text" v-bind="item.text"></v-card-text>
 
                 <v-card-actions v-if="item.actions && item.actions.items">
-                    <v-btn text v-for="(action,key) in item.actions.items" :key="key">
-                        <v-icon v-if="action.icon" v-text="action.icon"></v-icon>
-                        <v-label v-if="action.icon && action.text">&nbsp;</v-label>
-                        {{action.text}}
+                    <v-btn
+                        v-for="(action,key) in item.actions.items"
+                        :key="key"
+                        v-bind="action"
+                        @click="pub(action.event)"
+                    >
+                        <v-icon v-if="action.iconName" v-text="action.iconName"></v-icon>
+                        <v-label v-if="action.iconName && action.label">&nbsp;</v-label>
+                        {{action.label}}
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -38,6 +52,13 @@
 export default {
     props: {
         items: Array
+    },
+    methods: {
+        pub(e) {
+            if (e) {
+                //eventBus.$emit(e);
+            }
+        }
     }
 };
 </script>

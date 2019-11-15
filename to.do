@@ -1,13 +1,15 @@
 CARDS
 
-    refactoring
-        creare un costruttore di classi per pa/ma/fontsize/textcolor
-        vedere se si può bindare una prop "padding o size" direttamente (es. oggetto di style senza vuetify)
-        align right
+    base dati
+        annullati
+            creare un costruttore di classi per pa/ma/fontsize/textcolor
+            vedere se si può bindare una prop "padding o size" direttamente (es. oggetto di style senza vuetify)
+            lodash/fp/merge
+            lodash/mergeWith con customizer per array di classes [pa0, prova] + [pa2] = [pa2, prova]
 
-    lodash.merge
-        lodash/fp/merge
-        mergeWith con customizer per array di classes [pa0, prova] + [pa2] = [pa2, prova]
+    card
+        align right del testo
+        https://vuetifyjs.com/en/components/overlays
 
     gestire dimensionamento delle cards
         non in pixel ma in ratio
@@ -16,11 +18,16 @@ CARDS
         altezza img con moltiplicatore invece di px
 
     cover
-        aggiungere action/href/emitter
+        aggiungere action/href
+        usare lazysrc
+        gestire emitter
+        più righe di testo
+        actions
+        icone
 
     actions
-        aggiungere action/href/emitter
-        config size/color/align
+        gestire emitter
+        config size/color/align/outline anche per singolo (v. lodash.merge)
         gestire spacer
         responsive (non vanno daccapo ne resizano)
 
@@ -37,6 +44,7 @@ CARDS
 
 
 GENERALE
+- gestione eventi messa in un mixins
 - per il momento i dataset sono all'interno del padre, metterli in store?
 - store con namespace/components
 - Spostare l'handle resize da helloworld ad app, con store+emit, in modo che sia accessibile a tutti
