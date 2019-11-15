@@ -91,18 +91,22 @@ export default {
                 },
                 card: {
                     class: ["mx-auto", "pa-0", "ma-0"],
-                    maxWidth: "100%", //percentuale, pixel, vp
+                    maxWidth: null, //percentuale, pixel, vp
                     elevation: 0,
                     outlined: true
                 },
                 cover: {
-                    gradient: "to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.5)",
-                    class: ["white--text", "align-end", "pa-0", "ma-0"],
+                    gradient:
+                        "to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0.9)",
+                    class: ["black--text", "align-end", "pa-0", "ma-0"],
                     height: 150,
                     progress: {
                         indeterminate: true,
                         color: "grey lighten-5",
                         size: 48
+                    },
+                    caption: {
+                        class: ["justify-center", "white--text"]
                     }
                 },
                 icon: {
@@ -116,12 +120,13 @@ export default {
                 text: {
                     class: ["text-center", "black--text"]
                 },
-                _actions: {
-                    props: {
-                        class: ["black--text"],
-                        outlined: true,
-                        text: true
-                    }
+                actions: {
+                    class: ["text-right"]
+                    // props: {
+                    //     class: ["black--text"],
+                    //     outlined: true,
+                    //     text: true
+                    // }
                 }
             },
             items: [
@@ -153,9 +158,12 @@ export default {
                     cover: {
                         src:
                             "https://foto1.newsauto.it/wp-content/uploads/2019/06/Fiat-Uno-Turbo-elaborate-8.jpg",
-                        caption: "didascalia",
-                        href:
-                            "https://foto1.newsauto.it/wp-content/uploads/2019/06/Fiat-Uno-Turbo-elaborate-8.jpg"
+                        caption: {
+                            text: "didascalia"
+                        },
+                        gradient:
+                            "to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.75)",
+                        class: ["white--text", "align-end", "pa-0", "ma-0"]
                     },
                     title: {
                         text: "Bara Volante"
@@ -166,7 +174,7 @@ export default {
                 },
                 {
                     column: {
-                        cols: 4
+                        cols: 3
                     },
                     card: {
                         elevation: 1,
@@ -181,7 +189,7 @@ export default {
                 },
                 {
                     column: {
-                        cols: 4
+                        cols: 3
                     },
                     card: {
                         outlined: false
@@ -194,7 +202,7 @@ export default {
                 },
                 {
                     column: {
-                        cols: 4
+                        cols: 3
                     },
                     card: {
                         elevation: 5,
@@ -208,20 +216,33 @@ export default {
                         color: "#C0C"
                     },
                     actions: {
+                        class: ["text-center"],
+                        items: [
+                            {
+                                label: "con icona",
+                                iconName: "mdi-heart", //string -> oggetto (color, size ecc)
+                                to: "/about",
+                                //CFG
+                                class: ["black--text"],
+                                outlined: true,
+                                text: true
+                            }
+                        ]
+                    }
+                },
+                {
+                    column: {
+                        cols: 3
+                    },
+                    icon: {
+                        name: "mdi-earth"
+                    },
+                    actions: {
                         items: [
                             {
                                 label: "solo testo",
                                 href: "https://www.google.it",
                                 target: "_blank",
-                                //CFG
-                                class: ["black--text"],
-                                outlined: true,
-                                text: true
-                            },
-                            {
-                                label: "con icona",
-                                iconName: "mdi-heart", //string -> oggetto (color, size ecc)
-                                to: "/about",
                                 //CFG
                                 class: ["black--text"],
                                 outlined: true,

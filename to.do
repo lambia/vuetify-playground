@@ -1,5 +1,4 @@
 CARDS
-
     base dati
         annullati
             creare un costruttore di classi per pa/ma/fontsize/textcolor
@@ -8,28 +7,31 @@ CARDS
             lodash/mergeWith con customizer per array di classes [pa0, prova] + [pa2] = [pa2, prova]
 
     card
-        align right del testo
+        align right del testo (title/caption)
         https://vuetifyjs.com/en/components/overlays
 
     gestire dimensionamento delle cards
         non in pixel ma in ratio
         numero di colonne automatico (dispari daccapo)
-        responsive (non vanno daccapo ne resizano)
+        responsive estremo (breakpoint per andare accapo)
         altezza img con moltiplicatore invece di px
 
+    title/caption
+        aggiungere action/href -> su overlay?
+        text:center non funziona con il flex, ma con space
+
     cover
-        aggiungere action/href
+        aggiungere action/href -> su overlay
         usare lazysrc
         gestire emitter
-        più righe di testo
-        actions
-        icone
+        più righe di testo -> quandi usi "bg" invece di cover
+        actions -> quandi usi "bg" invece di cover
+        icone -> quandi usi "bg" invece di cover
 
     actions
         gestire emitter
-        config size/color/align/outline anche per singolo (v. lodash.merge)
+        config size/color/outline anche per singolo (v. lodash.merge)
         gestire spacer
-        responsive (non vanno daccapo ne resizano)
 
     component mancanti
         img (contain e box)
@@ -37,6 +39,7 @@ CARDS
         lista
         subtitle
         overline
+        stars
         hover (tutto img/bg con full text/icon all'hover)
         icona sovra-foto
         layout complessi
