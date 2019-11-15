@@ -86,30 +86,30 @@ export default {
     cardData: {
       config: {
         column: {
-          classes: ["pa-1", "ma-0"]
+          class: ["pa-1", "ma-0"],
+          cols: 4
         },
         card: {
-          classes: ["mx-auto", "pa-0", "ma-0"],
-          width: "100%", //percentuale, pixel, vp
-          columns: 4,
+          class: ["mx-auto", "pa-0", "ma-0"],
+          maxWidth: "100%", //percentuale, pixel, vp
           elevation: 0,
-          outline: true
+          outlined: true
         },
         cover: {
           gradient: "to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)",
-          classes: ["white--text", "align-end", "pa-0", "ma-0"],
+          class: ["white--text", "align-end", "pa-0", "ma-0"],
           height: 150
         },
         icon: {
           size: 64,
           color: "#0CC",
-          classes: "pa-4"
+          class: ["pa-4"]
         },
         title: {
-          classes: ["justify-center", "pa-2", "black--text"]
+          class: ["justify-center", "pa-2", "black--text"]
         },
         text: {
-          classes: "text-center black--text"
+          class: ["text-center", "black--text"]
         }
       },
       items: [
@@ -151,8 +151,8 @@ export default {
           }
         },
         {
-          card: {
-            columns: 4
+          column: {
+            cols: 4
           },
           title: { text: "Facciamo Cose" },
           text: { text: "Fare cose è importante" },
@@ -161,9 +161,11 @@ export default {
           }
         },
         {
+          column: {
+            cols: 4
+          },
           card: {
-            columns: 4,
-            outline: false
+            outlined: false
           },
           title: { text: "Finte Porte" },
           text: { text: "Compra le uniche vere finte porte" },
@@ -172,10 +174,12 @@ export default {
           }
         },
         {
+          column: {
+            cols: 4
+          },
           card: {
-            columns: 4,
             elevation: 1,
-            outline: false
+            outlined: false
           },
           title: { text: "Attenzione" },
           text: { text: "Questo ha l'icona custom" },

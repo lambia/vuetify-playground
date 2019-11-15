@@ -1,7 +1,6 @@
 CARDS
 
     refactoring
-        attaccare ogni prop dell'oggetto alle prop del component (vedi gradient di img)
         creare un costruttore di classi per pa/ma/fontsize/textcolor
         vedere se si può bindare una prop "padding o size" direttamente (es. oggetto di style senza vuetify)
 
