@@ -8,6 +8,8 @@
         </v-parallax>
 
         <v-layout text-center wrap>
+            <cardsNew />
+
             <cards :items="items" />
 
             <v-flex xs12>
@@ -45,11 +47,13 @@
 
 <script>
 import Cards from "@/components/Cards";
+import CardsNew from "@/components/CardsNew";
 const Merge = require("lodash.merge");
 
 export default {
     components: {
-        Cards
+        Cards,
+        CardsNew
     },
     created() {
         window.addEventListener("resize", this.handleResize);

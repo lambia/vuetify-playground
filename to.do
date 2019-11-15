@@ -52,6 +52,7 @@ CARDS
 
 
 GENERALE
+- aggiornare package.json e check per cli3 con shake
 - gestione eventi messa in un mixins
 - per il momento i dataset sono all'interno del padre, metterli in store?
 - store con namespace/components
