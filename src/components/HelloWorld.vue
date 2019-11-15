@@ -152,7 +152,6 @@ export default {
         },
         {
           card: {
-            width: 300,
             columns: 4
           },
           title: { text: "Facciamo Cose" },
@@ -163,8 +162,8 @@ export default {
         },
         {
           card: {
-            width: 300,
-            columns: 4
+            columns: 4,
+            outline: false
           },
           title: { text: "Finte Porte" },
           text: { text: "Compra le uniche vere finte porte" },
@@ -174,7 +173,6 @@ export default {
         },
         {
           card: {
-            width: 300,
             columns: 4,
             elevation: 1,
             outline: false
