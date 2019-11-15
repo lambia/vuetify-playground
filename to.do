@@ -4,6 +4,7 @@ CARDS
     actions: aggiungere action/href/emitter e config size/color/align
     component mancanti: img inline, subtitle e overline
 
+    mergiare item e config usando lodash.merge (mergeWith con customizer per array di classes)
 
     organizzare l'oggetto: img, caption, titolo, sovratitolo, sottotitolo, testo, bottoni con spacer, allineamento di ogni singola
     organizzare l'oggetto: al component ne arriva uno che è [...config, ...item]
@@ -11,6 +12,7 @@ CARDS
     creare un costruttore di classi per pa/ma/fontsize/textcolor
     vedere se si può bindare una prop "padding o size" direttamente (es. oggetto di style senza vuetify)
     
+    le actions non vanno daccapo
     nuovo template: card con img+icona+hover
 
     gestire il width della card come l'height dell'img (ternario+moltiplicatore)
