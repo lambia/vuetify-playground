@@ -1,11 +1,18 @@
 CARDS
+    gestire l'altezza delle img (al momento in px) e la larghezza del col (in col), fare una roba tipo bricks
+    cover: aggiungere action/href/emitter
+    actions: aggiungere action/href/emitter e config size/color/align
+    component mancanti: img inline, subtitle e overline
+
+
     organizzare l'oggetto: img, caption, titolo, sovratitolo, sottotitolo, testo, bottoni con spacer, allineamento di ogni singola
     organizzare l'oggetto: al component ne arriva uno che è [...config, ...item]
     attaccare ogni prop dell'oggetto alle prop del component (vedi gradient di img)
     creare un costruttore di classi per pa/ma/fontsize/textcolor
     vedere se si può bindare una prop "padding o size" direttamente (es. oggetto di style senza vuetify)
     
-    hover sulle card
+    nuovo template: card con img+icona+hover
+
     gestire il width della card come l'height dell'img (ternario+moltiplicatore)
     auto cols (che riporta i dispari in auto sul 12)
     Spaziatura varie (pa-n ma-n) parametrizzate
