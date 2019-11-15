@@ -69,8 +69,8 @@ export default {
         pretendApi() {
             let self = this;
 
-            this.items = this.cardData.items.map(item => {
-                return Merge({}, self.cardData.config, item);
+            this.items = this.cardsData.items.map(item => {
+                return Merge({}, self.cardsData.config, item);
             });
         }
     },
@@ -83,7 +83,7 @@ export default {
             }
         ],
         items: [],
-        cardData: {
+        cardsData: {
             config: {
                 column: {
                     class: ["pa-1", "ma-0"],
@@ -98,16 +98,20 @@ export default {
                 cover: {
                     gradient:
                         "to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0.9)",
-                    class: ["black--text", "align-end", "pa-0", "ma-0"],
+                    class: ["black--text", "align-center", "pa-0", "ma-0"],
                     height: 150,
                     progress: {
                         indeterminate: true,
                         color: "grey lighten-5",
                         size: 48
                     },
-                    caption: {
-                        class: ["justify-center", "white--text"]
-                    }
+                    title: {
+                        class: ["title", "text-center", "white--text"]
+                    },
+                    text: {
+                        class: ["text-center", "white--text", "pa-0"]
+                    },
+                    class: ["align-end", "pa-2"]
                 },
                 icon: {
                     size: 64,
@@ -115,10 +119,10 @@ export default {
                     class: ["pa-4"]
                 },
                 title: {
-                    class: ["justify-center", "pa-2", "black--text"]
+                    class: ["title", "primary--text", "pa-2"]
                 },
                 text: {
-                    class: ["text-center", "black--text"]
+                    class: ["text-center", "pa-1", "pb-2", "black--text"]
                 },
                 actions: {
                     class: ["text-right"]
@@ -133,7 +137,11 @@ export default {
                 {
                     cover: {
                         src:
-                            "https://www.ultimatecarpage.com/images/car/960/BMW-M3-GTR-Strassen-Version-59370.jpg"
+                            "https://www.ultimatecarpage.com/images/car/960/BMW-M3-GTR-Strassen-Version-59370.jpg",
+                        title: {
+                            text: "Need for Speed?",
+                            class: ["black--text", "text-right"]
+                        }
                     },
                     title: {
                         text: "Drago Alato"
@@ -158,12 +166,14 @@ export default {
                     cover: {
                         src:
                             "https://foto1.newsauto.it/wp-content/uploads/2019/06/Fiat-Uno-Turbo-elaborate-8.jpg",
-                        caption: {
+                        title: {
                             text: "didascalia"
                         },
+                        text: {
+                            text: "sottotitolo"
+                        },
                         gradient:
-                            "to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.75)",
-                        class: ["white--text", "align-end", "pa-0", "ma-0"]
+                            "to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.75)"
                     },
                     title: {
                         text: "Bara Volante"

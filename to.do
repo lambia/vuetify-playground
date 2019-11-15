@@ -6,6 +6,11 @@ CARDS
             lodash/fp/merge
             lodash/mergeWith con customizer per array di classes [pa0, prova] + [pa2] = [pa2, prova]
 
+    generico card padre
+        gestire invece che oggetto array per avere ordine dei component-is
+        oppure oggetto nested tipo [{component: "nome", props: {}, child: [ {component,prop},{component,prop} ]},{c..}]
+        gestire "class" durante il merge (v. lodash mergeWith), es.: colore testo non sovrascrive il config
+
     card
         align right del testo (title/caption)
         https://vuetifyjs.com/en/components/overlays
@@ -53,6 +58,8 @@ GENERALE
 - Spostare l'handle resize da helloworld ad app, con store+emit, in modo che sia accessibile a tutti
 - v-app-bar si spacca il layout se usi shrink o expand
 - v-app-bar usare shrink ed expand per le versioni di menu, e bg on-scroll va via
+- v-parallax[0] top:0 (sotto menu)
+- menu che può diventare trasparente
 
 Da usare per nav.vue (hover e idle)
 - Nav/NavLink con gestione active
