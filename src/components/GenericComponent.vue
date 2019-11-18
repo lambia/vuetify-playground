@@ -16,11 +16,16 @@
 
 
 <script>
-import { VBtn, VCol } from "vuetify/lib";
-import GenericComponent from "@/components/GenericComponent";
+import { VBtn, VCol, VCard } from "vuetify/lib";
 
 export default {
-    components: { VBtn, VCol, GenericComponent },
+    name: "GenericComponent",
+    components: {
+        VBtn,
+        VCol,
+        VCard,
+        GenericComponent: () => import("@/components/GenericComponent")
+    },
     props: {
         component: String,
         properties: Object,
