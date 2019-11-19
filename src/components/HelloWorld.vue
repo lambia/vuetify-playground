@@ -102,7 +102,7 @@ export default {
                 cover: {
                     gradient:
                         "to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0.9)",
-                    class: ["black--text", "align-center", "pa-0", "ma-0"],
+                    class: ["black--text", "align-end", "pa-2", "ma-0"],
                     height: 150,
                     progress: {
                         indeterminate: true,
@@ -114,8 +114,7 @@ export default {
                     },
                     text: {
                         class: ["text-center", "white--text", "pa-0"]
-                    },
-                    class: ["align-end", "pa-2"]
+                    }
                 },
                 icon: {
                     size: 64,
