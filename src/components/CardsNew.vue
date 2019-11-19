@@ -7,7 +7,6 @@
                 :component="item.component"
                 :properties="item.properties"
                 :body="item.body"
-                :append="item.append"
                 :children="item.children"
                 :slots="item.slots"
             ></genericComponent>
@@ -48,9 +47,9 @@ export default {
                                     {
                                         component: "v-card",
                                         properties: {
-                                            elevation: 6,
+                                            elevation: 3,
                                             maxWidth: null,
-                                            outlined: true,
+                                            outlined: false,
                                             class: ["mx-auto", "pa-0", "ma-0"]
                                         },
                                         children: [

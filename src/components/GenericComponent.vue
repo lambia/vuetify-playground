@@ -8,17 +8,11 @@
                 :component="item.component"
                 :properties="item.properties"
                 :body="item.body"
-                :append="item.append"
                 :children="item.children"
                 :slots="item.slots"
             ></GenericComponent>
         </template>
-        {{append}}
-        <template
-            v-for="slot in slots"
-            v-slot:[slot.name]
-            v-bind="slot.properties"
-        >
+        <template v-for="slot in slots" v-slot:[slot.name] v-bind="slot.properties">
             <template v-if="slot.children && slot.children.length">
                 <GenericComponent
                     v-for="(item,key) in slot.children"
@@ -26,7 +20,6 @@
                     :component="item.component"
                     :properties="item.properties"
                     :body="item.body"
-                    :append="item.append"
                     :children="item.children"
                     :slots="item.slots"
                 ></GenericComponent>
@@ -208,7 +201,6 @@ export default {
         component: String,
         properties: Object,
         body: String,
-        append: String,
         children: Array,
         slots: Array
     },
