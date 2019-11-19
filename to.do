@@ -1,4 +1,5 @@
 separa base dati da config e poi usare _.merge
+usare parentId in array piatto per poi costruire un tree?
 passa le classi in proprietà (es. pa-0 ecc)
 aggiungi v-if e testa sull'icona azione
 vedi se si può passare quel template in qualche modo senza if
