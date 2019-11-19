@@ -478,7 +478,35 @@ export default {
         ]
     }),
     created() {
-        this.items = this.items_ok;
+        //this.items = this.items_ok;
+        this.items = this.getNestedChildren(
+            this.items_flat,
+            0,
+            "id",
+            "parentId"
+        );
+    },
+    methods: {
+        getNestedChildren(arr, parentId, idField, parentField) {
+            let self = this;
+            var result = [];
+            for (var i in arr) {
+                if (arr[i][parentField] == parentId) {
+                    var children = self.getNestedChildren(
+                        arr,
+                        arr[i][idField],
+                        "id",
+                        "parentId"
+                    );
+
+                    if (children.length) {
+                        arr[i].children = children;
+                    }
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
     }
 };
 </script>
