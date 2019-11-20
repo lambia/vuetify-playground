@@ -22,257 +22,61 @@ export default {
     components: { GenericComponent },
     data: () => ({
         items: [],
-        items_ok: [
-            {
-                component: "v-flex",
-                properties: {
-                    xs12: true,
-                    class: ["pa-0", "ma-0"]
-                },
-                children: [
-                    {
-                        component: "v-row",
-                        properties: {
-                            "no-gutters": true,
-                            class: ["pa-1"]
-                        },
-                        children: [
-                            {
-                                component: "v-col",
-                                properties: {
-                                    key: 0,
-                                    cols: 4,
-                                    class: ["pa-1", "ma-0"]
-                                },
-                                children: [
-                                    {
-                                        component: "v-card",
-                                        properties: {
-                                            elevation: 3,
-                                            maxWidth: null,
-                                            outlined: false,
-                                            class: ["mx-auto", "pa-0", "ma-0"]
-                                        },
-                                        children: [
-                                            {
-                                                component: "v-img",
-                                                properties: {
-                                                    src:
-                                                        "https://www.ultimatecarpage.com/images/car/960/BMW-M3-GTR-Strassen-Version-59370.jpg",
-                                                    class: [
-                                                        "black--text",
-                                                        "align-end",
-                                                        "pa-2",
-                                                        "ma-0"
-                                                    ],
-                                                    gradient:
-                                                        "to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.75)",
-                                                    height: 150
-                                                },
-                                                slots: [
-                                                    {
-                                                        name: "placeholder",
-                                                        properties: {
-                                                            class: [
-                                                                "pa-1",
-                                                                "ma-0"
-                                                            ]
-                                                        },
-                                                        children: [
-                                                            {
-                                                                component:
-                                                                    "v-row",
-                                                                properties: {
-                                                                    align:
-                                                                        "center",
-                                                                    justify:
-                                                                        "center",
-                                                                    class: [
-                                                                        "fill-height",
-                                                                        "ma-0"
-                                                                    ]
-                                                                },
-                                                                children: [
-                                                                    {
-                                                                        component:
-                                                                            "v-progress-circular",
-                                                                        properties: {
-                                                                            indeterminate: true,
-                                                                            color:
-                                                                                "grey lighten-5",
-                                                                            size: 48
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                children: [
-                                                    {
-                                                        component:
-                                                            "v-card-text",
-                                                        properties: {
-                                                            class: [
-                                                                "pa-0",
-                                                                "ma-0"
-                                                            ]
-                                                        },
-                                                        children: [
-                                                            {
-                                                                component: "h2",
-                                                                properties: {
-                                                                    class: [
-                                                                        "title",
-                                                                        "text-center",
-                                                                        "white--text"
-                                                                    ]
-                                                                },
-                                                                body:
-                                                                    "TITOLO IMG"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        component:
-                                                            "v-card-text",
-                                                        properties: {
-                                                            class: [
-                                                                "text-center",
-                                                                "white--text",
-                                                                "pa-0"
-                                                            ]
-                                                        },
-                                                        body: "SOTTOTITOLO IMG"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                component: "v-icon",
-                                                properties: {
-                                                    size: 64,
-                                                    color: "#0CC",
-                                                    class: ["pa-4"]
-                                                },
-                                                body: "mdi-pencil"
-                                            },
-                                            {
-                                                component: "v-card-text",
-                                                properties: {
-                                                    class: ["pa-0", "ma-0"]
-                                                },
-                                                children: [
-                                                    {
-                                                        component: "h4",
-                                                        body: "Drago Alato",
-                                                        properties: {
-                                                            class: [
-                                                                "title",
-                                                                "primary--text",
-                                                                "pa-2",
-                                                                "text-center"
-                                                            ]
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                component: "v-card-text",
-                                                properties: {
-                                                    class: [
-                                                        "text-center",
-                                                        "pa-1",
-                                                        "pb-2",
-                                                        "black--text"
-                                                    ]
-                                                },
-                                                body:
-                                                    "Una BMW E46 M3 GTR Strassen Version"
-                                            },
-                                            {
-                                                component: "v-card-actions",
-                                                children: [
-                                                    {
-                                                        component: "v-flex",
-                                                        properties: {
-                                                            xs12: true,
-                                                            class: [
-                                                                "pa-0",
-                                                                "ma-0",
-                                                                "text-center"
-                                                            ]
-                                                        },
-                                                        children: [
-                                                            {
-                                                                component:
-                                                                    "v-btn",
-                                                                properties: {
-                                                                    class: [
-                                                                        "black--text"
-                                                                    ],
-                                                                    outlined: true,
-                                                                    text: true,
-                                                                    to: "/about"
-                                                                },
-                                                                children: [
-                                                                    {
-                                                                        component:
-                                                                            "v-icon",
-                                                                        body:
-                                                                            "mdi-heart"
-                                                                    },
-                                                                    {
-                                                                        component:
-                                                                            "v-label",
-                                                                        body:
-                                                                            "Con Icona"
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                component: "v-col",
-                properties: {
-                    cols: 6,
-                    class: ["pa-1", "ma-0"]
-                },
-                body: "template",
-                children: []
-            }
-        ],
-        items_data: [
+        data: [
             [
                 {
-                    identity: "card.cover.img",
-                    src:
-                        "https://www.ultimatecarpage.com/images/car/960/BMW-M3-GTR-Strassen-Version-59370.jpg"
+                    //card cover img
+                    componentId: 5,
+                    properties: {
+                        src:
+                            "https://www.ultimatecarpage.com/images/car/960/BMW-M3-GTR-Strassen-Version-59370.jpg"
+                    }
                 },
                 {
-                    identity: "card.cover.title",
+                    //card cover title
+                    componentId: 10,
                     body: "TITOLO IMG"
                 },
                 {
-                    identity: "card.cover.text",
+                    //card cover text
+                    componentId: 11,
+                    body: "Sottotitolo IMG"
+                },
+                {
+                    //card icon
+                    componentId: 12,
+                    body: "mdi-earth"
+                },
+                {
+                    //card title
+                    componentId: 14,
                     body: "Drago Alato"
                 },
                 {
-                    identity: "card.text",
+                    //card text
+                    componentId: 15,
                     body: "Una BMW E46 M3 GTR Strassen Version"
+                },
+                {
+                    //action link
+                    componentId: 18,
+                    properties: {
+                        to: "/about"
+                    }
+                },
+                {
+                    //action icon
+                    componentId: 19,
+                    body: "mdi-heart"
+                },
+                {
+                    //action text
+                    componentId: 20,
+                    body: "Con Icona"
                 }
             ]
         ],
-        items_flat: [
+        structure: [
             {
                 id: 1,
                 parentId: 0,
@@ -316,11 +120,8 @@ export default {
             {
                 id: 5,
                 parentId: 4,
-                identity: "card.cover.img",
                 component: "v-img",
                 properties: {
-                    src:
-                        "https://www.ultimatecarpage.com/images/car/960/BMW-M3-GTR-Strassen-Version-59370.jpg", //SPOSTARE
                     class: ["black--text", "align-end", "pa-2", "ma-0"],
                     gradient: "to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.75)",
                     height: 150
@@ -363,7 +164,7 @@ export default {
             // },
             {
                 id: 9,
-                parentId: 4,
+                parentId: 5,
                 component: "v-card-text",
                 properties: {
                     class: ["pa-0", "ma-0"]
@@ -371,23 +172,19 @@ export default {
             },
             {
                 id: 10,
-                parentId: 4,
-                identity: "card.cover.title",
+                parentId: 9,
                 component: "h2",
                 properties: {
                     class: ["title", "text-center", "white--text"]
-                },
-                body: "TITOLO IMG" //SPOSTARE
+                }
             },
             {
                 id: 11,
-                parentId: 4,
-                identity: "card.cover.text",
+                parentId: 5,
                 component: "v-card-text",
                 properties: {
                     class: ["text-center", "white--text", "pa-0"]
-                },
-                body: "SOTTOTITOLO IMG" //SPOSTARE
+                }
             },
             {
                 id: 12,
@@ -397,8 +194,7 @@ export default {
                     size: 64,
                     color: "#0CC",
                     class: ["pa-4"]
-                },
-                body: "mdi-pencil" //SPOSTARE
+                }
             },
             {
                 id: 13,
@@ -412,9 +208,7 @@ export default {
             {
                 id: 14,
                 parentId: 13,
-                identity: "card.title",
                 component: "h4",
-                body: "Drago Alato", //SPOSTARE
                 properties: {
                     class: ["title", "primary--text", "pa-2", "text-center"]
                 }
@@ -422,12 +216,10 @@ export default {
             {
                 id: 15,
                 parentId: 4,
-                identity: "card.text",
                 component: "v-card-text",
                 properties: {
                     class: ["text-center", "pa-1", "pb-2", "black--text"]
-                },
-                body: "Una BMW E46 M3 GTR Strassen Version" //SPOSTARE
+                }
             },
             {
                 id: 16,
@@ -450,21 +242,18 @@ export default {
                 properties: {
                     class: ["black--text"],
                     outlined: true,
-                    text: true,
-                    to: "/about" //SPOSTARE
+                    text: true
                 }
             },
             {
                 id: 19,
                 parentId: 18,
-                component: "v-icon",
-                body: "mdi-heart" //SPOSTARE
+                component: "v-icon"
             },
             {
                 id: 20,
                 parentId: 18,
-                component: "v-label",
-                body: "Con Icona" //SPOSTARE
+                component: "v-label"
             },
             {
                 id: 999,
@@ -478,15 +267,31 @@ export default {
         ]
     }),
     created() {
-        //this.items = this.items_ok;
-        this.items = this.getNestedChildren(
-            this.items_flat,
-            0,
+        //check merge/sovrascrivi
+
+        /*
+        const 1 = { 1: { string: 'yes' }, 2:  { string: 'no' } }
+        const 2 = { 2: { string: 'yes' }, 3: { string: 'no' } }
+        const 3 = { ...1, ...2}
+        */
+
+        let result = this.mergeBy(
+            this.structure,
+            this.data[0],
             "id",
-            "parentId"
+            "componentId"
         );
+
+        this.items = this.getNestedChildren(result, 0, "id", "parentId");
+        console.log("items: ", this.items);
     },
     methods: {
+        mergeBy(source, extend, sourceField, extendField) {
+            return source.map(row => ({
+                ...row,
+                ...extend.find(item => row[sourceField] == item[extendField])
+            }));
+        },
         getNestedChildren(arr, parentId, idField, parentField) {
             let self = this;
             var result = [];
