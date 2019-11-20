@@ -5,6 +5,7 @@ aggiungi v-if e testa sull'icona azione
 vedi se si può passare quel template in qualche modo senza if
 caricare components esterni
 crea service/helper/moduli ecc..
+spostare services in oggetto nel prototipo vue, che restituisce il costruttore
 
 CARDS
     base dati

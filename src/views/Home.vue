@@ -1,16 +1,16 @@
 <template>
     <div>
-        <HelloWorld />
+        <Blocks />
     </div>
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld";
+import Blocks from "@/components/Blocks";
 import AppService from "@/services/app.service";
 
 export default {
     components: {
-        HelloWorld
+        Blocks
     }
 };
 </script>

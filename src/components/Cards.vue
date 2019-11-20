@@ -69,16 +69,22 @@
 
 
 <script>
+import AppService from "@/services/app.service";
+
 export default {
-    props: {
-        items: Array
-    },
     methods: {
         pub(e) {
             if (e) {
                 //eventBus.$emit(e);
             }
         }
+    },
+    data: () => ({
+        items: []
+    }),
+    created() {
+        const srv = new AppService();
+        this.items = srv.pretendApi(true);
     }
 };
 </script>

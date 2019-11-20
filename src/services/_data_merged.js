@@ -1,4 +1,4 @@
-let items = [
+let Merged = [
     {
         component: "v-flex",
         properties: {
@@ -227,3 +227,5 @@ let items = [
         children: []
     }
 ];
+
+export default Merged;
