@@ -1,0 +1,44 @@
+[Pages]
+id  pageName    route
+1   home        /home
+2   about       /about
+
+[Components]
+id  pageId  componentName   ...
+1   1       menu
+2   1       cards
+3   1       footer
+4   2       menu
+5   2       about
+
+[Props]
+id  componentId     prop
+1   2               uno
+2   2               e
+3   2               due
+
+p = get pages(id == 1)
+c = get components(pageId == p.id)
+pp = get props(componentId == c.id)
+
+
+
+
+
+_______________________________
+CI VUOLE LA RELAZIONE?
+
+[PageComponents]
+id  pageId  componentId
+..  1       1
+..  2       1
+..  1       3
+..  1       4
+..  2       2
+
+[Components]
+id  componentName   props
+1   menu
+2   about
+3   cards
+4   footer
